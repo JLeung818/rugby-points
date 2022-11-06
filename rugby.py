@@ -1,9 +1,5 @@
-import os
-import sys
-filenames = os.listdir(sys.argv[1])
-for filename in filenames:
-    file = open(sys.argv[1]+"/"+filename, "rb")
-    first = file.read().decode('ISO-8859-1')
+x = input("Enter match points")
+for i in x:
     team1 = []
     team2 = []
     points1 = []
@@ -43,6 +39,3 @@ for filename in filenames:
     total1 = sum(points1)
     total2 = sum(points2)
     final =  str(total1) + ":" + str(total2)
-    file = open(sys.argv[2] + "/" + filename[:-4] + "_u75904yl.txt", "w")
-    file.write(str(final))
-    file.close()
